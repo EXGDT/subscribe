@@ -20,8 +20,6 @@ dns:
     - 114.114.114.114
     - https://15629036986.rubyfish.cn
     - 8.8.8.8
-experimental:
-  interface-name: 以太网
 proxies:
   - {name: bear0, server: bear0.hotpotbear.cc, port: 443, type: vmess, uuid: a9ced638-5668-4721-ab78-603b7d1d63dc, alterId: 233, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: bear0.hotpotbear.cc}}
   - {name: blog, server: blog.hotpotbear.cc, port: 443, type: vmess, uuid: 11b6784b-9970-45c4-a09f-df8181802f10, alterId: 233, cipher: auto, tls: true, network: ws, ws-path: /v2, ws-headers: {Host: blog.hotpotbear.cc}}
@@ -66,6 +64,11 @@ proxy-groups:
       - blot
       - bear0
       - auto
+  # scholar.google
+  - name: Scholar
+    type: select
+    proxies:
+      - blot
 
 rules:
   # Apple
@@ -227,7 +230,7 @@ rules:
 
   # 抗 DNS 污染 
   - DOMAIN-KEYWORD,amazon,Proxy
-  - DOMAIN-KEYWORD,google,Proxy
+  - DOMAIN-KEYWORD,google,Scholar
   - DOMAIN-KEYWORD,gmail,Proxy
   - DOMAIN-KEYWORD,youtube,Proxy
   - DOMAIN-KEYWORD,facebook,Proxy
