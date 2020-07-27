@@ -23,15 +23,17 @@ dns:
 experimental:
   interface-name: 以太网
 proxies:
-  - {name: 233v2.com_bear0.hotpotbear.cc, server: bear0.hotpotbear.cc, port: 443, type: vmess, uuid: a9ced638-5668-4721-ab78-603b7d1d63dc, alterId: 233, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: bear0.hotpotbear.cc}}
-  - {name: 233v2.com_blog.hotpotbear.cc, server: blog.hotpotbear.cc, port: 443, type: vmess, uuid: 11b6784b-9970-45c4-a09f-df8181802f10, alterId: 233, cipher: auto, tls: true, network: ws, ws-path: /v2, ws-headers: {Host: blog.hotpotbear.cc}}
+  - {name: bear0, server: bear0.hotpotbear.cc, port: 443, type: vmess, uuid: a9ced638-5668-4721-ab78-603b7d1d63dc, alterId: 233, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: bear0.hotpotbear.cc}}
+  - {name: blog, server: blog.hotpotbear.cc, port: 443, type: vmess, uuid: 11b6784b-9970-45c4-a09f-df8181802f10, alterId: 233, cipher: auto, tls: true, network: ws, ws-path: /v2, ws-headers: {Host: blog.hotpotbear.cc}}
+  - {name: blot, server: blot.hotpotbear.cc, port: 443, type: vmess, uuid: 37508cbb-de56-4cf3-a782-cb9c93e15f5b, alterId: 233, cipher: auto, tls: true, network: ws, ws-path: /v2, ws-headers: {Host: blot.hotpotbear.cc}}
 proxy-groups:
   # url-test 可以自动选择与指定 URL 测速后，延迟最短的服务器
   - name: "auto"
     type: url-test
     proxies:
-      - 233v2.com_blog.hotpotbear.cc
-      - 233v2.com_bear0.hotpotbear.cc
+      - blog
+      - blot
+      - bear0
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
@@ -39,8 +41,9 @@ proxy-groups:
   - name: "fallback-auto"
     type: fallback
     proxies:
-      - 233v2.com_blog.hotpotbear.cc
-      - 233v2.com_bear0.hotpotbear.cc
+      - blog
+      - blot
+      - bear0
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
@@ -48,8 +51,9 @@ proxy-groups:
   - name: "load-balance"
     type: load-balance
     proxies:
-      - 233v2.com_blog.hotpotbear.cc
-      - 233v2.com_bear0.hotpotbear.cc
+      - blog
+      - blot
+      - bear0
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
@@ -58,8 +62,9 @@ proxy-groups:
   - name: Proxy
     type: select
     proxies:
-      - 233v2.com_blog.hotpotbear.cc
-      - 233v2.com_bear0.hotpotbear.cc
+      - blog
+      - blot
+      - bear0
       - auto
 
 rules:
