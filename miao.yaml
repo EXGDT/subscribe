@@ -230,7 +230,7 @@ rules:
 
   # 抗 DNS 污染 
   - DOMAIN-KEYWORD,amazon,Proxy
-  - DOMAIN-KEYWORD,google,Scholar
+  - DOMAIN-KEYWORD,scholar.google,Scholar
   - DOMAIN-KEYWORD,gmail,Proxy
   - DOMAIN-KEYWORD,youtube,Proxy
   - DOMAIN-KEYWORD,facebook,Proxy
