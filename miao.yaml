@@ -160,7 +160,7 @@ rules:
   - RULE-SET,China,DIRECT
   
   # Google Scholar
-  - DOMAIN,scholar.google,Scholar
+  - DOMAIN-KEYWORD,scholar.google,Scholar
 
   # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
