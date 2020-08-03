@@ -143,7 +143,7 @@ rule-providers:
 # 规则
 rules:
   # Google Scholar
-  - DOMAIN-KEYWORD,google,Scholar
+  - DOMAIN-KEYWORD,scholar.google,Scholar
 
   # Unbreak
   - RULE-SET,Unbreak,DIRECT
