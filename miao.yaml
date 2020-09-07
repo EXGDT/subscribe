@@ -69,8 +69,6 @@ proxy-groups:
     proxies:
       - PROXY
       - blog
-      - blot
-      - bear0
 
   # 中国流媒体服务（面向海外版本）
   - name: "StreamingSE"
@@ -145,23 +143,23 @@ rules:
   # Google Scholar
   - DOMAIN-KEYWORD,scholar.google,Scholar
   # Netflix
-  - DOMAIN-SUFFIX,netflix.com,Scholar
-  - DOMAIN-SUFFIX,netflix.net,Scholar
-  - DOMAIN-SUFFIX,nflxext.com,Scholar
-  - DOMAIN-SUFFIX,nflximg.com,Scholar
-  - DOMAIN-SUFFIX,nflximg.net,Scholar
-  - DOMAIN-SUFFIX,nflxso.net,Scholar
-  - DOMAIN-SUFFIX,nflxvideo.net,Scholar
-  - DOMAIN-SUFFIX,netflixdnstest0.com,Scholar
-  - DOMAIN-SUFFIX,netflixdnstest1.com,Scholar
-  - DOMAIN-SUFFIX,netflixdnstest2.com,Scholar
-  - DOMAIN-SUFFIX,netflixdnstest3.com,Scholar
-  - DOMAIN-SUFFIX,netflixdnstest4.com,Scholar
-  - DOMAIN-SUFFIX,netflixdnstest5.com,Scholar
-  - DOMAIN-SUFFIX,netflixdnstest6.com,Scholar
-  - DOMAIN-SUFFIX,netflixdnstest7.com,Scholar
-  - DOMAIN-SUFFIX,netflixdnstest8.com,Scholar
-  - DOMAIN-SUFFIX,netflixdnstest9.com,Scholar
+  #- DOMAIN-SUFFIX,netflix.com,Scholar
+  #- DOMAIN-SUFFIX,netflix.net,Scholar
+  #- DOMAIN-SUFFIX,nflxext.com,Scholar
+  #- DOMAIN-SUFFIX,nflximg.com,Scholar
+  #- DOMAIN-SUFFIX,nflximg.net,Scholar
+  #- DOMAIN-SUFFIX,nflxso.net,Scholar
+  #- DOMAIN-SUFFIX,nflxvideo.net,Scholar
+  #- DOMAIN-SUFFIX,netflixdnstest0.com,Scholar
+  #- DOMAIN-SUFFIX,netflixdnstest1.com,Scholar
+  #- DOMAIN-SUFFIX,netflixdnstest2.com,Scholar
+  #- DOMAIN-SUFFIX,netflixdnstest3.com,Scholar
+  #- DOMAIN-SUFFIX,netflixdnstest4.com,Scholar
+  #- DOMAIN-SUFFIX,netflixdnstest5.com,Scholar
+  #- DOMAIN-SUFFIX,netflixdnstest6.com,Scholar
+  #- DOMAIN-SUFFIX,netflixdnstest7.com,Scholar
+  #- DOMAIN-SUFFIX,netflixdnstest8.com,Scholar
+  #- DOMAIN-SUFFIX,netflixdnstest9.com,Scholar
 
   # Unbreak
   - RULE-SET,Unbreak,DIRECT
@@ -179,9 +177,6 @@ rules:
 
   # China Area Network
   - RULE-SET,China,DIRECT
-  
-  # Google Scholar
-  - DOMAIN-KEYWORD,google,Scholar
 
   # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
